@@ -23,130 +23,186 @@
         method="GET"
       >
         <div class="content">
-          <p>
-            <label for="user">Ім'я: </label>
-            <input
-              id="user"
-              type="text"
-              name="username"
-              placeholder="  як звати"
-              autofocus
-            />
-          </p>
-          <p>
-            <label for="surname">Прізвище: </label>
-            <input
-              id="surname"
-              type="text"
-              name="usersurname"
-              placeholder="  а прізвище"
-            />
-          </p>
-          <p>
-            <label for="email">Email: </label>
-            <input
-              id="email"
-              type="email"
-              name="username"
-              placeholder="  електронна пошта"
-            />
-          </p>
-          <p>
-            <label for="phone">Телефон: </label>
-            <input
-              id="phone"
-              type="tel"
-              name="telef"
-              placeholder="  телефончик"
-              required
-              pattern="\+?[0-9]{10,13}"
-            />
-          </p>
-          <p>
-            <label for="web">Сайт: </label>
-            <input
-              id="web"
-              type="url"
-              name="site"
-              placeholder=" або фейсбучик"
-            />
-          </p>
-          <p>
-            <label for="length">Довжина носа (см): </label>
-            <input
-              id="length"
-              type="number"
-              name="finger"
-              placeholder=" шо з носом"
-              min="5"
-              max="18"
-              step="3"
-            />
-          </p>
-          <p>
-            <label for="color">То любов: </label>
-            <input id="color" type="color" name="color" value="#FF0000" />
-          </p>
-          <p>
-            <label for="col">То журба: </label>
-            <input id="col" type="color" name="color" />
-          </p>
-          <p>
-            <label for="amb">Амбіцеометр: </label>
-            <input
-              oninput="hour.value=(amb.value); minute.value=(amb.value * 60)"
-              id="amb"
-              type="range"
-              name="ambition"
-              min="0"
-              max="168"
-              value="0"
-            />
-            <br /><br />
-            <label> Скільки часу на тиждень <br />ви готові галерити: </label>
-            <output id="hour">0</output> годиночок <br /><br />
-            <label>або ж</label>
-            <output id="minute">0</output> хвилиночок
-          </p>
-          <p>
-            <label for="sex">Стать: </label>
-            <input id="sex" type="radio" name="sex" /> Жіноча
-            <input type="radio" name="sex" /> Та точно жіноча
-          </p>
-          <p>
-            <label for="lang">Що бажаєте: </label>
-            <input id="lang" type="checkbox" name="course" /> HTML
-            <input type="checkbox" name="course" /> CSS
-            <input type="checkbox" name="course" /> JS
-            <input type="checkbox" name="course" checked /> вже все вмію
-          </p>
-          <p>
-            <label for="wage">Коли вже 500 баксів: </label>
-            <input
-              id="wage"
-              type="month"
-              name="wage"
-              value="2019-12"
-              max="2019-12"
-            />
-          </p>
-          <p>
-            <label for="time"
-              >О котрій годині вам <br />зручно відвідувати заняття:
-            </label>
-            <input id="time" type="time" name="time" value="23:00" />
-          </p>
-          <p>
-            <label for="pin">Пінкод <br />банківської картки: </label>
-            <input
-              id="pin"
-              type="password"
-              name="site"
-              placeholder=" хіба ж можна"
-              minlength="4"
-              maxlength="4"
-            />
-          </p>
+          <fieldset>
+            <legend class="legend">Особиста інформація:</legend>
+            <p>
+              <label for="user">Ім'я: </label>
+              <input
+                id="user"
+                type="text"
+                name="username"
+                placeholder="  як звати"
+                autofocus
+                required
+              />
+            </p>
+            <p>
+              <label for="surname">Прізвище: </label>
+              <input
+                id="surname"
+                type="text"
+                name="usersurname"
+                placeholder="  а прізвище"
+                required
+              />
+            </p>
+            <p>
+              <label for="email">Email: </label>
+              <input
+                id="email"
+                type="email"
+                name="username"
+                placeholder="  електронна пошта"
+                required
+              />
+            </p>
+            <p>
+              <label for="phone">Телефон: </label>
+              <input
+                id="phone"
+                type="tel"
+                name="telef"
+                placeholder="  телефончик"
+                required
+                pattern="\+?[0-9]{10,13}"
+              />
+            </p>
+            <p>
+              <label for="web">Сайт: </label>
+              <input
+                id="web"
+                type="url"
+                name="site"
+                placeholder=" або фейсбучик"
+                required
+              />
+            </p>
+            <p>
+              <label for="sex">Стать: </label>
+              <input id="sex" type="radio" name="sex" /> Жіноча
+              <input type="radio" name="sex" /> Та точно жіноча
+            </p>
+            <p>
+              <label for="city">Ваше місто:</label>
+              <select id="city" name="city">
+                <option selected>Виберіть місто</option>
+                <optgroup label="Полтавська область">
+                  <option value="polt1">Лохвиця</option>
+                  <option value="polt2">Кобеляки</option>
+                  <option value="polt3">Пирятин</option>
+                  <option value="polt4">Полтава</option>
+                  <option value="polt5">Горішні Плавні</option>
+                </optgroup>
+                <optgroup label="Рівненська область" disabled>
+                  <option value="riv1">Вараш</option>
+                  <option value="riv2">Острог</option>
+                  <option value="riv3">Рівне</option>
+                  <option value="riv4">Сарни</option>
+                </optgroup>
+                <optgroup label="Сумська область">
+                  <option value="sum1">Ворожба</option>
+                  <option value="sum2">Путивль</option>
+                  <option value="sum3">Ромни</option>
+                  <option value="sum4">Суми</option>
+                  <option value="sum5">Шостка</option>
+                </optgroup>
+              </select>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend class="legend">Особливо важлива інформація:</legend>
+            <p>
+              <label for="length">Довжина носа (см): </label>
+              <input
+                id="length"
+                type="number"
+                name="finger"
+                placeholder=" шо з носом"
+                min="5"
+                max="18"
+                step="3"
+                required
+              />
+            </p>
+            <p>
+              <label for="color">То любов: </label>
+              <input id="color" type="color" name="color" value="#FF0000" />
+            </p>
+            <p>
+              <label for="col">То журба: </label>
+              <input id="col" type="color" name="color" />
+            </p>
+            <p>
+              <label for="amb">Амбіцеометр: </label>
+              <input
+                oninput="hour.value=(amb.value); minute.value=(amb.value * 60)"
+                id="amb"
+                type="range"
+                name="ambition"
+                min="0"
+                max="168"
+                value="0"
+                required
+              />
+              <br /><br />
+              <label> Скільки часу на тиждень <br />ви готові галерити: </label>
+              <output id="hour">0</output> годиночок <br /><br />
+              <label>або ж</label>
+              <output id="minute">0</output> хвилиночок
+            </p>
+
+            <p>
+              <label for="lang">Що бажаєте: </label>
+              <input id="lang" type="checkbox" name="course" /> HTML
+              <input type="checkbox" name="course" /> CSS
+              <input type="checkbox" name="course" /> JS
+              <input type="checkbox" name="course" checked /> вже все вмію
+            </p>
+            <p>
+              <label for="wage">Коли вже 500 баксів: </label>
+              <input
+                id="wage"
+                type="month"
+                name="wage"
+                value="2019-12"
+                max="2019-12"
+                required
+              />
+            </p>
+            <p>
+              <label for="time"
+                >О котрій годині вам <br />зручно відвідувати заняття:
+              </label>
+              <input id="time" type="time" name="time" value="23:00" />
+            </p>
+            <p>
+              <label for="pin">Пінкод <br />банківської картки: </label>
+              <input
+                id="pin"
+                type="password"
+                name="site"
+                placeholder=" хіба ж можна"
+                minlength="4"
+                maxlength="4"
+                required
+              />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend class="legend">Зробіть нам приємне:</legend>
+
+            <p>
+              <label for="text">Ваші побажання та пропозиції:</label>
+              <textarea
+                name="smm"
+                id="text"
+                cols="30"
+                rows="5"
+                maxlength="200"
+                placeholder="щастя здоровля племінничків"
+              ></textarea>
+            </p>
+          </fieldset>
         </div>
         <input
           type="submit"
