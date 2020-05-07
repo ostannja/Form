@@ -6,13 +6,16 @@
     <title>Form</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css" />
   </head>
   <body>
     <div class="container">
+      <img src="img/heart.jpg"
       <header>
         <h2>
           Ласкаво просимо на чергові курси<br />програмистинь (програмистесс)
         </h2>
+        <i class="fas fa-snowman fa-2x"></i>
         <h3>Заповніть, будь ласка, форму:</h3>
       </header>
       <form
@@ -28,6 +31,7 @@
             <p>
               <label for="user">Ім'я: </label>
               <input
+              class="awesome"
                 id="user"
                 type="text"
                 name="username"
@@ -67,9 +71,9 @@
                 pattern="\+?[0-9]{10,13}"
               />
             </p>
-            <p>
+            <p >
               <label for="web">Сайт: </label>
-              <input
+              <input class="before"
                 id="web"
                 type="url"
                 name="site"
@@ -79,7 +83,7 @@
             </p>
             <p>
               <label for="sex">Стать: </label>
-              <input id="sex" type="radio" name="sex" /> Жіноча
+              <input class="awesome" name="sex" type="radio" /> Жіноча
               <input type="radio" name="sex" /> Та точно жіноча
             </p>
             <p>
@@ -173,7 +177,7 @@
               <label for="time"
                 >О котрій годині вам <br />зручно відвідувати заняття:
               </label>
-              <input id="time" type="time" name="time" value="23:00" />
+              <input class="awesome" id="time" type="time" name="time" value="23:00" />
             </p>
             <p>
               <label for="pin">Пінкод <br />банківської картки: </label>
@@ -204,6 +208,7 @@
             </p>
           </fieldset>
         </div>
+        <div class="button">
         <input
           type="submit"
           name="username"
@@ -214,6 +219,7 @@
           name="username"
           value="Кніпочка для очищення даних"
         />
+        </div>
       </form>
     </div>
   </body>
