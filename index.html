@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <title>Form</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
     <link rel="stylesheet" href="libs/fontawesome/all.min.css" />
   </head>
   <body>
@@ -30,56 +31,67 @@
             <legend class="legend">Особиста інформація:</legend>
             <p>
               <label for="user">Ім'я: </label>
+              <span class="icon awesomename">
               <input
-              class="awesome"
                 id="user"
                 type="text"
                 name="username"
-                placeholder="  як звати"
+                placeholder=" як звати"
                 autofocus
                 required
               />
+              </span>
             </p>
             <p>
               <label for="surname">Прізвище: </label>
+              <span class="icon awesomesurname">
               <input
                 id="surname"
                 type="text"
                 name="usersurname"
-                placeholder="  а прізвище"
+                placeholder=" а прізвище"
                 required
               />
+            </span>
             </p>
             <p>
               <label for="email">Email: </label>
+              <span class="icon awesomemail">
               <input
                 id="email"
                 type="email"
                 name="username"
-                placeholder="  електронна пошта"
+                placeholder=" електронна пошта"
                 required
               />
+            </span>
             </p>
             <p>
               <label for="phone">Телефон: </label>
-              <input
+              <span class="icon awesometel">
+                <input
                 id="phone"
                 type="tel"
                 name="telef"
-                placeholder="  телефончик"
+                placeholder=" телефончик"
                 required
                 pattern="\+?[0-9]{10,13}"
               />
+              </span>
+              
             </p>
             <p >
               <label for="web">Сайт: </label>
-              <input class="before"
+              <span class="icon awesomesite">
+                <input class="before"
                 id="web"
                 type="url"
                 name="site"
                 placeholder=" або фейсбучик"
                 required
               />
+              </span>
+              
             </p>
             <p>
               <label for="sex">Стать: </label>
@@ -88,8 +100,9 @@
             </p>
             <p>
               <label for="city">Ваше місто:</label>
-              <select id="city" name="city">
-                <option selected>Виберіть місто</option>
+                <span class="icon awesomecity">
+                  <select id="city" name="city" >
+                  <option  selected>Виберіть місто</option>
                 <optgroup label="Полтавська область">
                   <option value="polt1">Лохвиця</option>
                   <option value="polt2">Кобеляки</option>
@@ -111,13 +124,15 @@
                   <option value="sum5">Шостка</option>
                 </optgroup>
               </select>
+            </span>
             </p>
           </fieldset>
           <fieldset>
             <legend class="legend">Особливо важлива інформація:</legend>
             <p>
               <label for="length">Довжина носа (см): </label>
-              <input
+              <span class="icon awesomenose">
+                <input
                 id="length"
                 type="number"
                 name="finger"
@@ -127,6 +142,8 @@
                 step="3"
                 required
               />
+              </span>
+              
             </p>
             <p>
               <label for="color">То любов: </label>
@@ -221,6 +238,9 @@
         />
         </div>
       </form>
+        <div class="love">
+          <i class="far fa-kiss-wink-heart fa-2x"></i>
+        </div>
     </div>
   </body>
 </html>
